@@ -1,0 +1,4 @@
+site_name: EDIUG-SC-CGIB
+theme:
+  name: material
+  font: false

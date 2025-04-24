@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="LeNotFound">
+    <title>校园通勤车最近班次</title>
+    <style>
+        /* 设置页面字体和基本样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        /* 设置页面的容器居中，适应不同设备 */
+        .container {
+            max-width: 500px;
+            width: 90%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 0px;
+            margin-top: 20px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            margin-top: 0px;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            margin-top: -5px;
+            color: #555;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            margin-top: -10px;
+            color: #555;
+        }
+
+        /* 每个时间段的卡片样式 */
+        .box {
+            background-color: #e0e7ff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* 鼠标悬停时变化 */
+        .box:hover {
+            background-color: #c7d2fe;
+        }
+
+        /* 时间文字样式 */
+        .time {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        /* 完整时刻表容器 */
+        .schedule-table {
+            max-width: 500px;
+            width: 90%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* 时刻表的表格样式 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 5px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        th {
+            background-color: #e0e7ff;
+            font-weight: bold;
+        }
+
+        /* 响应式字体和布局调整 */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1rem;
+            }
+
+            .time {
+                font-size: 1.8rem;
+            }
+
+            th,
+            td {
+                padding: 6px;
+            }
+        }
+
+        /* 适应更小屏幕 */
+        @media (max-width: 400px) {
+            h1 {
+                font-size: 1.3rem;
+            }
+
+            h2 {
+                font-size: 0.9rem;
+            }
+
+            .time {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>北京印刷学院校车最近班次</h1>
+
+        <div class="box">
+            <h2>康庄校区最近班次</h2>
+            <div class="time" id="kangzhuang-time">Loading...</div>
+        </div>
+
+        <div class="box">
+            <h2>主校区最近班次</h2>
+            <div class="time" id="main-campus-time">Loading...</div>
+        </div>
+    </div>
+
+    <div class="schedule-table">
+        <h3>全部班次时刻表</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>康庄校区</th>
+                    <th>主校区</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>7:00</td>
+                    <td>7:20</td>
+                </tr>
+                <tr>
+                    <td>7:40</td>
+                    <td>7:35</td>
+                </tr>
+                <tr>
+                    <td>8:00</td>
+                    <td>8:00</td>
+                </tr>
+                <tr>
+                    <td>8:25</td>
+                    <td>8:35</td>
+                </tr>
+                <tr>
+                    <td>9:00</td>
+                    <td>8:45</td>
+                </tr>
+                <tr>
+                    <td>9:30</td>
+                    <td>9:40</td>
+                </tr>
+                <tr>
+                    <td>10:00</td>
+                    <td>9:50</td>
+                </tr>
+                <tr>
+                    <td>10:30</td>
+                    <td>10:30</td>
+                </tr>
+                <tr>
+                    <td>10:50</td>
+                    <td>11:00</td>
+                </tr>
+                <tr>
+                    <td>12:10</td>
+                    <td>11:30</td>
+                </tr>
+                <tr>
+                    <td>12:20</td>
+                    <td>12:40</td>
+                </tr>
+                <tr>
+                    <td>13:10</td>
+                    <td>13:10</td>
+                </tr>
+                <tr>
+                    <td>13:40</td>
+                    <td>13:30</td>
+                </tr>
+                <tr>
+                    <td>14:00</td>
+                    <td>14:10</td>
+                </tr>
+                <tr>
+                    <td>14:30</td>
+                    <td>14:25</td>
+                </tr>
+                <tr>
+                    <td>15:00</td>
+                    <td>15:00</td>
+                </tr>
+                <tr>
+                    <td>15:30</td>
+                    <td>15:25</td>
+                </tr>
+                <tr>
+                    <td>16:00</td>
+                    <td>16:00</td>
+                </tr>
+                <tr>
+                    <td>16:30</td>
+                    <td>16:25</td>
+                </tr>
+                <tr>
+                    <td>17:10</td>
+                    <td>17:00</td>
+                </tr>
+                <tr>
+                    <td>17:30</td>
+                    <td>18:10</td>
+                </tr>
+                <tr>
+                    <td>18:30</td>
+                    <td>18:20</td>
+                </tr>
+                <tr>
+                    <td>18:40</td>
+                    <td>19:00</td>
+                </tr>
+                <tr>
+                    <td>19:20</td>
+                    <td>19:50</td>
+                </tr>
+                <tr>
+                    <td>20:10</td>
+                    <td>20:00</td>
+                </tr>
+                <tr>
+                    <td>20:20</td>
+                    <td>20:30</td>
+                </tr>
+                <tr>
+                    <td>20:50</td>
+                    <td>21:00</td>
+                </tr>
+                <tr>
+                    <td>21:20</td>
+                    <td>21:10</td>
+                </tr>
+                <tr>
+                    <td>21:30</td>
+                    <td>22:00</td>
+                </tr>
+                <tr>
+                    <td>22:20</td>
+                    <td>22:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const kangzhuangSchedule = [
+            "7:00", "7:40", "8:00", "8:25", "9:00", "9:30", "10:00", "10:30", "10:50", "12:10", "12:20", "13:10", "13:40", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:10", "17:30", "18:30", "18:40", "19:20", "20:10", "20:20", "20:50", "21:20", "21:30", "22:20"
+        ];
+
+        const mainCampusSchedule = [
+            "7:20", "7:35", "8:00", "8:35", "8:45", "9:40", "9:50", "10:30", "11:00", "11:30", "12:40", "13:10", "13:30", "14:10", "14:25", "15:00", "15:25", "16:00", "16:25", "17:00", "18:10", "18:20", "19:00", "19:50", "20:00", "20:30", "21:00", "21:10", "22:00", "22:00"
+        ];
+
+        function getNextBusTime(schedule) {
+            const now = new Date();
+            const currentHours = now.getHours();
+            const currentMinutes = now.getMinutes();
+            for (let time of schedule) {
+                let [hours, minutes] = time.split(':').map(Number);
+                if (hours > currentHours || (hours === currentHours && minutes > currentMinutes)) {
+                    return time;
+                }
+            }
+            return "今天已无班次";
+        }
+
+        function highLightNB() {
+            const nextKangzhuangBus = getNextBusTime(kangzhuangSchedule);
+            const nextMainCampusBus = getNextBusTime(mainCampusSchedule);
+
+            const scheduleTable = document.querySelector('.schedule-table').querySelector('tbody');
+            const rows = scheduleTable.querySelectorAll('tr');
+
+            rows.forEach(row => {
+                const kangzhuangTd = row.cells[0]; // 康庄校区的班次时间
+                const mainCampusTd = row.cells[1]; // 主校区的班次时间
+
+                if (kangzhuangTd && kangzhuangTd.textContent.trim() === nextKangzhuangBus) {
+                    kangzhuangTd.style.backgroundColor = '#e0e7ff';
+                }
+                else {
+                    kangzhuangTd.style.backgroundColor = '#fff';
+                }
+
+                if (mainCampusTd && mainCampusTd.textContent.trim() === nextMainCampusBus) {
+                    mainCampusTd.style.backgroundColor = '#e0e7ff';
+                }
+                else {
+                    mainCampusTd.style.backgroundColor = '#fff';
+                }
+            });
+        }
+
+        function updateTimes() {
+            document.getElementById("kangzhuang-time").innerText = getNextBusTime(kangzhuangSchedule);
+            document.getElementById("main-campus-time").innerText = getNextBusTime(mainCampusSchedule);
+        }
+
+        updateTimes();
+        setInterval(updateTimes, 60000); // 每分钟更新一次时间
+        highLightNB();
+        setInterval(highLightNB, 60000);
+    </script>
+
+</body>
+
+</html>
