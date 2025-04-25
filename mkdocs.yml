@@ -15,5 +15,18 @@ nav:
       - 程序设计基础: 大一上/程序设计基础/index.md
       - 线性代数: 大一上/线性代数/index.md
       - 高等数学 - Ⅰ: 大一上/高等数学 - Ⅰ/index.md
-  - 校车时刻表:
-      - 校车时刻表: 校车时刻表/index.md
+      - 军事理论: 大一上/军事理论/index.md
+  - 校园服务:
+      - 校车时刻表: 校园服务/bbs-lnf.md
+      - 校园网: 校园服务/bigc_wifi.md
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - tables
+  - def_list
+  - footnotes
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde  # ✅ 用这个代替 strikethrough 支持 ~删除线~
