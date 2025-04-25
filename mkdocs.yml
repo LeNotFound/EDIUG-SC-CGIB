@@ -2,3 +2,18 @@ site_name: EDIUG-SC-CGIB
 theme:
   name: material
   font: false
+plugins:
+  - search
+nav:
+  - 主页: index.md
+  - 大一上:
+      - 出版概论: 大一上/出版概论/index.md
+      - 大国出版: 大一上/大国出版/index.md
+      - 大学生心理健康: 大一上/大学生心理健康/index.md
+      - 大学英语一级: 大一上/大学英语一级/index.md
+      - 思想道德与法治: 大一上/思想道德与法治/index.md
+      - 程序设计基础: 大一上/程序设计基础/index.md
+      - 线性代数: 大一上/线性代数/index.md
+      - 高等数学 - Ⅰ: 大一上/高等数学 - Ⅰ/index.md
+  - 校车时刻表:
+      - 校车时刻表: 校车时刻表/index.md
