@@ -26,6 +26,7 @@ nav:
           - 二楼民族餐厅:
             - 小火锅: 校园生活/食堂/康庄食堂/二楼民族餐厅/小火锅.md
             - 面包房: 校园生活/食堂/康庄食堂/二楼民族餐厅/面包房.md
+  - 贡献指南: 贡献指南/CONTRIBUTING.md
 markdown_extensions:
   - admonition
   - toc:
