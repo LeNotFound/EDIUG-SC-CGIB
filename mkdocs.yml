@@ -2,6 +2,8 @@ site_name: EDIUG-SC-CGIB
 theme:
   name: material
   font: false
+  icon:
+    repo: fontawesome/brands/git-alt
 plugins:
   - search
 nav:
@@ -52,3 +54,5 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde  # ✅ 用这个代替 strikethrough 支持 ~删除线~
+repo_url: https://github.com/LeNotFound/EDIUG-SC-CGIB
+repo_name: LeNotFound/EDIUG-SC-CGIB
