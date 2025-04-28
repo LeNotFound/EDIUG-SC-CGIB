@@ -6,6 +6,7 @@ theme:
     repo: fontawesome/brands/git-alt
 plugins:
   - search
+  - git-revision-date
 nav:
   - 主页: index.md
   - 贡献指南: 贡献指南/CONTRIBUTING.md
