@@ -13,7 +13,8 @@
 ### 贡献者
 感谢所有参与本项目的同学和校友，你们的贡献让这个仓库更加完善。特别感谢以下贡献者：
 
-[LeNotFound](https://github.com/LeNotFound)
+[LeNotFound](https://github.com/LeNotFound)  
+[lcx0128](https://github.com/lcx0128)
 
 ## 许可
 本项目使用 **Creative Commons Attribution-ShareAlike 4.0 International License（CC BY-SA 4.0）**。你可以自由地复制、修改、分发这个项目的内容，只要你给出适当的署名，并在相同的许可证下分享衍生作品。
