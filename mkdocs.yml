@@ -4,6 +4,21 @@ theme:
   font: false
   icon:
     repo: fontawesome/brands/git-alt
+  palette:
+  - media: (prefers-color-scheme)
+    toggle:
+      icon: material/brightness-auto
+      name: Auto
+  - scheme: default
+    media: "(prefers-color-scheme: light)"
+    toggle:
+      icon: material/weather-sunny
+      name: Light Mode
+  - scheme: slate
+    media: "(prefers-color-scheme: dark)"
+    toggle:
+      icon: material/weather-night
+      name: Dark Mode
 plugins:
   - search
   - git-revision-date
