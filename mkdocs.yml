@@ -81,6 +81,7 @@ nav:
           - 面包房: 校园生活/食堂/康庄食堂/二楼民族餐厅/面包房.md
   - 养生指南:
     - 养生指南/食补.md
+    - 养生指南/药补.md
 markdown_extensions:
   - admonition
   - toc:
